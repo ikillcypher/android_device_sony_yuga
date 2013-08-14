@@ -15,7 +15,6 @@
 # Inherit the fusion-common definitions
 $(call inherit-product, device/sony/fusion3-common/fusion3.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/yuga/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -64,9 +63,6 @@ PRODUCT_COPY_FILES += \
 # Device specific part for two-stage boot
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/recovery/bootrec-device:recovery/bootrec-device
-
-PRODUCT_PACKAGES += \
-    XperiaSettings
 
 # call dalvik heap config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
